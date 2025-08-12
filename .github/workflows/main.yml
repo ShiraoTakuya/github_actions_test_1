@@ -13,6 +13,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}       # レンタルサーバーのホスト名
           username: ${{ secrets.SSH_USER }}   # SSHユーザー
           key: ${{ secrets.SSH_PRIVATE_KEY }} # 秘密鍵（Deploy keyとは別でOK）
+          port: 10022  # もし22番以外ならここに指定
           script: |
             cd ${{ secrets.SSH_DEPLOY_DIR }}
             git pull origin main
