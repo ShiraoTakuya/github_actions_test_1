@@ -1,5 +1,3 @@
-name: Deploy to Server
-
 on:
   push:
     branches:
@@ -10,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH and Deploy
-        uses: appleboy/ssh-action@v1.2.0
+        uses: github_actions_test_1@main
         with:
           host: ${{ secrets.SSH_HOST }}       # レンタルサーバーのホスト名
           username: ${{ secrets.SSH_USER }}   # SSHユーザー
